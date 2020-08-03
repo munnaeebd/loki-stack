@@ -11,3 +11,13 @@ kubectl get secret --namespace loki-stack loki-stack-grafana -o jsonpath="{.data
 ~~~
 
 Edit grafana service and set nodeport or create ingress. 
+
+
+Variable setting for loki dashboard:
+~~~
+$namespace	label_values(kube_pod_info, namespace)
+$pod	label_values(kube_pod_info{namespace=~"$namespace"}, pod)
+
+Add a query-->{namespace="$namespace", pod=~"$pod"}
+      Visualization --> logs
+      
