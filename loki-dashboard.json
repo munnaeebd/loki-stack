@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": null,
-  "iteration": 1596599064964,
+  "id": 1,
+  "iteration": 1596599501384,
   "links": [],
   "panels": [
     {
@@ -55,10 +55,10 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "kube-system",
-          "value": "kube-system"
+          "text": "default",
+          "value": "default"
         },
-        "datasource": "Loki",
+        "datasource": "Prometheus",
         "definition": "label_values(kube_pod_info, namespace)",
         "hide": 0,
         "includeAll": false,
@@ -81,10 +81,10 @@
       {
         "allValue": null,
         "current": {
-          "text": "calico-node-p9lhd",
-          "value": "calico-node-p9lhd"
+          "text": "nginx-f89759699-jg88f",
+          "value": "nginx-f89759699-jg88f"
         },
-        "datasource": "Loki",
+        "datasource": "Prometheus",
         "definition": "label_values(kube_pod_info{namespace=~\"$namespace\"}, pod)",
         "hide": 0,
         "includeAll": false,
@@ -126,9 +126,9 @@
   },
   "timezone": "",
   "title": "Loki",
-  "uid": null,
+  "uid": "AXYrZkIGk",
   "variables": {
     "list": []
   },
-  "version": 0
+  "version": 3
 }
