@@ -15,8 +15,8 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 1,
-  "iteration": 1596599501384,
+  "id": 2,
+  "iteration": 1596602816433,
   "links": [],
   "panels": [
     {
@@ -42,7 +42,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Panel Title",
+      "title": "Logs",
       "type": "logs"
     }
   ],
@@ -55,8 +55,8 @@
         "allValue": null,
         "current": {
           "selected": true,
-          "text": "default",
-          "value": "default"
+          "text": "kube-system",
+          "value": "kube-system"
         },
         "datasource": "Prometheus",
         "definition": "label_values(kube_pod_info, namespace)",
@@ -81,8 +81,8 @@
       {
         "allValue": null,
         "current": {
-          "text": "nginx-f89759699-jg88f",
-          "value": "nginx-f89759699-jg88f"
+          "text": "calico-node-vs5nx",
+          "value": "calico-node-vs5nx"
         },
         "datasource": "Prometheus",
         "definition": "label_values(kube_pod_info{namespace=~\"$namespace\"}, pod)",
