@@ -18,6 +18,11 @@ Variable setting for loki dashboard:
 $namespace	label_values(kube_pod_info, namespace)
 $pod	label_values(kube_pod_info{namespace=~"$namespace"}, pod)
 
+or if any issue
+
+$namespace	label_values(namespace)
+$pod label_values(container_network_receive_bytes_total{namespace=~"$namespace"}, pod)
+
 Add a query-->{namespace="$namespace", pod=~"$pod"}
       Visualization --> logs
       
