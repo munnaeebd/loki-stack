@@ -26,3 +26,20 @@ $pod label_values(container_network_receive_bytes_total{namespace=~"$namespace"}
 Add a query-->{namespace="$namespace", pod=~"$pod"}
       Visualization --> logs
       
+~~~
+
+Per query entry increase
+
+~~~
+kubectl edit secret loki-stack -n loki-stack
+echo 'code'  | base64 --decode
+
+limits_config:
+  enforce_metric_name: false
+  reject_old_samples: true
+  reject_old_samples_max_age: 168h
+  max_entries_limit_per_query: 0
+   
+or from lens edit secret and save   
+  ~~~
+  
